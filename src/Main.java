@@ -68,7 +68,7 @@ class Solution {
                         if ((plan.get(i).get(j - 1).charValue() == '#' && plan.get(i - 1).get(j).charValue() == '#') ||
                                 (plan.get(i+1).get(j - 1).charValue() == '#' && plan.get(i - 1).get(j).charValue() == '#')) { //Check for beginning of room
                             /**
-                             * Assumption :- Anytime # is there before and above the space it is considered as beginning of new room.
+                             * Assumption :- Anytime # is there before and above/below the space it is considered as beginning of new room.
                              */
                             colorTracker.put(j, getRoomColor(colorIndex)); // Room color is tracked to reuse in the subsequent iteration
                             colorIndex++;
