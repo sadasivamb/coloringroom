@@ -65,7 +65,8 @@ class Solution {
                         System.out.print(plan.get(i).get(j));
                         roomColor = null;
                     } else {
-                        if (plan.get(i).get(j - 1).charValue() == '#' && plan.get(i - 1).get(j).charValue() == '#') { //Check for beginning of room
+                        if ((plan.get(i).get(j - 1).charValue() == '#' && plan.get(i - 1).get(j).charValue() == '#') ||
+                                (plan.get(i+1).get(j - 1).charValue() == '#' && plan.get(i - 1).get(j).charValue() == '#')) { //Check for beginning of room
                             /**
                              * Assumption :- Anytime # is there before and above the space it is considered as beginning of new room.
                              */
